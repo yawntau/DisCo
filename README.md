@@ -1,4 +1,4 @@
-<img width="1273" height="167" alt="image" src="https://github.com/user-attachments/assets/d276b354-45ca-48e4-a030-d6745627636b" /># DisCo: Purified Disentanglement with Latent Relational Compensation for Remote Sensing Image Change Captioning
+# DisCo: Purified Disentanglement with Latent Relational Compensation for Remote Sensing Image Change Captioning
 ## Official Implementation for DisCo
 
 ### 📌 About
