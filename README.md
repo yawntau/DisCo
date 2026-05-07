@@ -1,8 +1,9 @@
-# DisCo: Purified Disentanglement with Latent Relational Compensation for Remote Sensing Image Change Captioning
+<img width="1273" height="167" alt="image" src="https://github.com/user-attachments/assets/d276b354-45ca-48e4-a030-d6745627636b" /># DisCo: Purified Disentanglement with Latent Relational Compensation for Remote Sensing Image Change Captioning
 ## Official Implementation for DisCo
 
 ### 📌 About
-- **Authors**: Your Name
+- **Authors**:Tao Yang, Qing Zhou, and Qi Wang
+<!--
 - **Affiliation**: Your University / Lab
 - **Conference**: Under review / AAAI / CVPR / Journal
 - **Paper Link**: https://arxiv.org/xxx
@@ -27,3 +28,4 @@ In this paper, we address the challenging problem in xxx. We propose a novel fra
 Install dependencies:
 ```bash
 pip install -r requirements.txt
+-->
