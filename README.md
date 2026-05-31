@@ -1,8 +1,15 @@
-# DisCo: Purified Disentanglement with Latent Relational Compensation for Remote Sensing Image Change Captioning
+# DisCo: Disentanglement with Compensation for Remote Sensing Image Change Captioning
 
 Official implementation of **DisCo** for remote sensing image change captioning.
 
-## About
+<p align="center">
+  <img src="https://img.shields.io/badge/Task-Change%20Captioning-1f6feb?style=for-the-badge" alt="Task">
+  <img src="https://img.shields.io/badge/Framework-PyTorch-ee4c2c?style=for-the-badge&logo=pytorch&logoColor=white" alt="Framework">
+  <img src="https://img.shields.io/badge/Backbone-SegFormer-0f766e?style=for-the-badge" alt="Backbone">
+  <img src="https://img.shields.io/badge/Datasets-LEVIR--MCI%20%7C%20WHU--CDC-f59e0b?style=for-the-badge" alt="Datasets">
+</p>
+
+## 📖 About
 
 - **Authors**: Tao Yang, Qing Zhou, and Qi Wang
 - **Task**: Remote sensing image change captioning
@@ -10,7 +17,7 @@ Official implementation of **DisCo** for remote sensing image change captioning.
 
 DisCo is a change captioning framework that combines purified feature disentanglement with latent relational compensation to improve semantic description of changes between bi-temporal remote sensing images.
 
-## Features
+## ✨ Features
 
 - Supports training and evaluation on **LEVIR-MCI** and **WHU-CDC**
 - Uses a **SegFormer**-based visual encoder by default
@@ -18,7 +25,7 @@ DisCo is a change captioning framework that combines purified feature disentangl
 - Provides evaluation scripts with BLEU, METEOR, ROUGE-L, and CIDEr
 - Includes single-pair caption generation for inference
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```text
 DisCo/
@@ -47,7 +54,7 @@ DisCo/
 └── train.py
 ```
 
-## Environment
+## 🛠 Environment
 
 ### Option 1: Install from `requirements.txt`
 
@@ -70,7 +77,7 @@ pip install torch torchvision torchaudio
 pip install -r requirements.txt
 ```
 
-## Prerequisites
+## 📌 Prerequisites
 
 ### 1. Prepare Java for METEOR evaluation
 
@@ -100,7 +107,7 @@ model/pretrained/mit_b4.pth
 model/pretrained/mit_b5.pth
 ```
 
-## Dataset Preparation
+## 🗂 Dataset Preparation
 
 This repository already includes dataset split files, token files, and vocabulary files under `data/LEVIR_MCI/` and `data/whu_CDC/`.
 
@@ -143,7 +150,7 @@ python preprocess_data.py --dataset LEVIR_MCI
 
 Note that `preprocess_data.py` currently contains a hard-coded `DATA_PATH_ROOT`. You should update that path before using the script on your machine.
 
-## Training
+## 🚀 Training
 
 ### Train on WHU-CDC
 
@@ -191,7 +198,7 @@ CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 train.py \
 - `--val_interval`: validation frequency in epochs
 - `--checkpoint`: optional checkpoint for resuming
 
-## Evaluation
+## 📊 Evaluation
 
 ### Evaluate a single checkpoint
 
@@ -227,7 +234,7 @@ bash test.sh
 
 Before using it, update dataset paths, GPU IDs, and environment variables in the script.
 
-## Inference
+## 🔎 Inference
 
 Generate a caption for a single image pair:
 
@@ -243,7 +250,7 @@ Important notes:
 - The checkpoint path inside `predict.py` should be changed to your actual trained model
 - The vocabulary path and dataset-related defaults in `predict.py` should also be adjusted before use
 
-## Output
+## 📦 Output
 
 Training checkpoints are saved under:
 
@@ -258,7 +265,7 @@ Evaluation results are typically saved under:
 ./models_ckpt/<run_name>/all_metrics_summary.json
 ```
 
-## Notes
+## ⚠️ Notes
 
 - `model/pretrained/` is required for SegFormer backbones but is ignored by the current `.gitignore`
 - `models_ckpt/` is ignored and should not be committed
@@ -266,7 +273,7 @@ Evaluation results are typically saved under:
 - `predict.py` contains machine-specific default paths and should be adjusted before inference
 - The repository includes evaluation code for METEOR, so Java is a runtime dependency for testing
 
-## Citation
+## 📝 Citation
 
 If you use this repository in your research, please cite the corresponding paper when available.
 
@@ -279,6 +286,6 @@ If you use this repository in your research, please cite the corresponding paper
 }
 ```
 
-## Acknowledgment
+## 🙏 Acknowledgment
 
 This repository uses standard captioning metrics including BLEU, METEOR, ROUGE-L, and CIDEr, and builds on PyTorch, MMEngine, MMCV, MMSegmentation, and SegFormer-related components.
