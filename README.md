@@ -1,4 +1,4 @@
-# DisCo: Purified Disentanglement with Latent Relational Compensation for Remote Sensing Image Change Captioning
+# DisCo: Disentanglement with Compensation for Remote Sensing Image Change Captioning
 ## Official Implementation for DisCo
 
 ### 📌 About
